@@ -31,8 +31,9 @@ public class Grade {
         String studentName = "";
         int studentNumber = -1;
         String continueInput;
+        int failedSubjects = 0;
 
-       // double math = -1, english = -1, science = -1, ESP = -1, MAPEH = -1, filipino = -1, AP = -1, TLE = -1;
+
         double math, english, science, ESP, MAPEH, filipino, AP, TLE;
 
         Scanner sc = new Scanner(System.in);
@@ -53,7 +54,6 @@ public class Grade {
                 break;
             }
 
-            //Add lang ako Student Number
             do {
                 System.out.printf("%-25s", "Enter Student Number: ");
                 while (!sc.hasNextInt()) {
@@ -68,14 +68,9 @@ public class Grade {
             } while (studentNumber <= -1);
 
             System.out.println();
-        /*
-        System.out.println("AVERAGE FOR HONORS");
-        System.out.println("WITH HIGHEST HONOR(100-96), WITH HIGH HONOR(95-90), WITH HONOR(89-85)");
-        System.out.println();
 
-         */
-
-            //Looping Gallore
+            //Looping Galore
+            //Do while is used because it's useful for checking invalid input
             //Math
             do {
                 System.out.printf("%-25s", "Enter Grade in Math: ");
@@ -185,7 +180,6 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Grade in TLE: ");
                 }
                 TLE = sc.nextDouble();
-                //When user input a negative values (saka na ung pag lagpas 100)
                 if (TLE < 0 || (TLE <= 59.4 && TLE >= 0) || TLE > 100) {
                     System.out.println("Error: did not meet the required grade");
                 }
@@ -195,36 +189,50 @@ public class Grade {
             double avgGrade = (math + english + science + ESP + MAPEH + filipino + AP + TLE) / 8;
             long roundedAvgGrade = Math.round(avgGrade);
 
-
             System.out.println();
 
             System.out.println("*****************************************************");
-
 
             System.out.printf("Student Name: %s\n", studentName);
             System.out.printf("Student Number: %d\n", studentNumber);
             System.out.println("Average Grade: " + avgGrade);
             System.out.println("Rounded Grade: " + roundedAvgGrade);
 
+            //Check if the grades is less than 75
+            //if less than 75, 'failedSubjects' increments
+            if(math < 75) failedSubjects++;
+            if(english < 75) failedSubjects++;
+            if(science < 75) failedSubjects++;
+            if(ESP < 75) failedSubjects++;
+            if(MAPEH < 75) failedSubjects++;
+            if(filipino < 75) failedSubjects++;
+            if(AP < 75) failedSubjects++;
+            if(TLE < 75) failedSubjects++;
 
-            if (roundedAvgGrade >= 96 && roundedAvgGrade <= 100) {
+            //Conditions to be executed
+            //if 'failedSubjects' is 0 means there is no subjects that are less than 75
+            if(failedSubjects == 0){
                 System.out.println("Remarks: Passed");
-                System.out.println("Awards: WITH HIGHEST HONOR");
-            } else if (roundedAvgGrade >= 90 && roundedAvgGrade <= 95) {
-                System.out.println("Remarks: Passed");
-                System.out.println("Awards: WITH HIGH HONOR");
-            } else if (roundedAvgGrade >= 85 && roundedAvgGrade <= 89) {
-                System.out.println("Remarks: Passed");
-                System.out.println("Awards: WITH HONOR");
-            } else if (roundedAvgGrade >= 75 && roundedAvgGrade <= 84) {
-                System.out.println("Remarks: Passed");
+                if (roundedAvgGrade >= 96 && roundedAvgGrade <= 100) {
+                    System.out.println("Awards: WITH HIGHEST HONOR");
+                } else if (roundedAvgGrade >= 90 && roundedAvgGrade <= 95) {
+                    System.out.println("Awards: WITH HIGH HONOR");
+                } else if (roundedAvgGrade >= 85 && roundedAvgGrade <= 89) {
+                    System.out.println("Awards: WITH HONOR");
+                }
+
             }
-            //This condition below executes when the grade is -1 or when grade is above 100
-            else if (roundedAvgGrade <= -1 || roundedAvgGrade >= 101) {
-                System.out.println("Remarks: Invalid");
-            } else {
-                System.out.println("Remarks: Failed");
+            //if there is one or two subjects that are less than 75
+            //this condition is executed
+            else if (failedSubjects == 1 || failedSubjects == 2){
+                System.out.println("Remarks: Summer Class");
             }
+            //if there is three or more subjects that are less than 75
+            //this is executed
+            else {
+                System.out.println("Remarks: Repeat");
+            }
+
 
             System.out.println("*****************************************************");
             System.out.print("Would you like to check another student record? (y/n): ");
