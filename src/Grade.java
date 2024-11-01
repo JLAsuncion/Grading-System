@@ -39,15 +39,28 @@ public class Grade {
         Scanner sc = new Scanner(System.in);
 
         do {
-            System.out.println("**************WELCOME TO GRADING SYSTEM*************");
+            System.out.println("★★★★★★★★★★★★★★★★★★★★WELCOME TO GRADING SYSTEM★★★★★★★★★★★★★★★★★★★★");
 
 
-            while (studentName.isEmpty() || !studentName.matches("[A-Za-z]+( [A-Za-z]+)*")) {
+            while (studentName.isEmpty() || !studentName.matches("[A-Za-z\\.]+( [A-Za-z\\.]+)*")) {
                 System.out.printf("%-25s", "Enter Student Name: ");
                 studentName = sc.nextLine();
 
-                // The "[A-Za-z]+( [A-Za-z]+)*" basically to verify if "name" contains characters
-                if (!studentName.matches("[A-Za-z]+( [A-Za-z]+)*")) {
+                // REGEX (Regular Expression):
+                // A special text string for describing a search pattern
+                // Helps check if text matches specific rules
+
+                // Regex Patterns used:
+                // [A-Za-z\\.] - Match letters(from capital A-Z and small a-z letters) and dots
+                // "+" - One or more of previous characters
+                // ( [A-Za-z\\.]+)* - Allow multiple words with spaces
+
+                // Examples:
+                // Allowed: "John", "John Luis", "St. John"
+                // Error: "John123", "John!", "  "
+
+                // The "[A-Za-z]+( [A-Za-z]+)*" basically to verify if "studentName" contains characters.
+                if (!studentName.matches("[A-Za-z\\.]+( [A-Za-z\\.]+)*")) {
                     System.out.println("Invalid Name. Please enter a valid name.");
                     continue;
                 }
@@ -57,6 +70,7 @@ public class Grade {
             do {
                 System.out.printf("%-25s", "Enter Student Number: ");
                 while (!sc.hasNextInt()) {
+                    //Add comment for what is hasNextInt means
                     System.out.println("Invalid input. Please enter a number.");
                     sc.next();
                     System.out.printf("%-25s", "Enter Student Number: ");
@@ -80,10 +94,11 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Grade in Math: ");
                 }
                 math = sc.nextDouble();
-                if (math < 0 || (math <= 59.4 && math >= 0) || math > 100) {
+                if (math <= 59.4 || math > 100) {
+                    //Add more error handling
                     System.out.println("Error: did not meet the required grade ");
                 }
-            } while (math < 0 || (math <= 59.4 && math >= 0) || math > 100);
+            } while (math <= 59.4 || math > 100);
 
             //English
             do {
@@ -94,10 +109,10 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Grade in English: ");
                 }
                 english = sc.nextDouble();
-                if (english < 0 || (english <= 59.4 && english >= 0) || english > 100) {
+                if (english <= 59.4 || english > 100) {
                     System.out.println("Error: did not meet the required grade");
                 }
-            } while (english < 0 || (english <= 59.4 && english >= 0) || english > 100);
+            } while (english <= 59.4 || english > 100);
 
             //Science
             do {
@@ -108,10 +123,10 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Grade in Science: ");
                 }
                 science = sc.nextDouble();
-                if (science < 0 || (science <= 59.4 && science >= 0) || science > 100) {
+                if (science <= 59.4 || science > 100) {
                     System.out.println("Error: did not meet the required grade");
                 }
-            } while (science < 0 || (science <= 59.4 && science >= 0) || science > 100);
+            } while (science <= 59.4 || science > 100);
 
 
             //ESP
@@ -123,10 +138,10 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Grade in ESP: ");
                 }
                 ESP = sc.nextDouble();
-                if (ESP < 0 || (ESP <= 59.4 && ESP >= 0) || ESP > 100) {
+                if (ESP <= 59.4 || ESP > 100) {
                     System.out.println("Error: did not meet the required grade ");
                 }
-            } while (ESP < 0 || (ESP <= 59.4 && ESP >= 0) || ESP > 100);
+            } while (ESP <= 59.4 || ESP > 100);
 
             //MAPEH
             do {
@@ -137,10 +152,10 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Grade in MAPEH: ");
                 }
                 MAPEH = sc.nextDouble();
-                if (MAPEH < 0 || (MAPEH <= 59.4 && MAPEH >= 0) || MAPEH > 100) {
+                if (MAPEH <= 59.4 || MAPEH > 100) {
                     System.out.println("Error: did not meet the required grade");
                 }
-            } while (MAPEH < 0 || (MAPEH <= 59.4 && MAPEH >= 0) || MAPEH > 100);
+            } while (MAPEH <= 59.4 || MAPEH > 100);
 
             //Filipino
             do {
@@ -151,10 +166,10 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Grade in Filipino: ");
                 }
                 filipino = sc.nextDouble();
-                if (filipino < 0 || (filipino <= 59.4 && filipino >= 0) || filipino > 100) {
+                if (filipino <= 59.4 || filipino > 100) {
                     System.out.println("Error: did not meet the required grade");
                 }
-            } while (filipino < 0 || (filipino <= 59.4 && filipino >= 0) || filipino > 100);
+            } while (filipino <= 59.4 || filipino > 100);
 
             //AP
             do {
@@ -165,10 +180,10 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Grade in AP: ");
                 }
                 AP = sc.nextDouble();
-                if (AP < 0 || (AP <= 59.4 && AP >= 0) || AP > 100) {
+                if (AP <= 59.4 || AP > 100) {
                     System.out.println("Error: did not meet the required grade");
                 }
-            } while (AP < 0 || (AP <= 59.4 && AP >= 0) || AP > 100);
+            } while (AP <= 59.4 || AP > 100);
 
             //TLE
             do {
@@ -180,10 +195,10 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Grade in TLE: ");
                 }
                 TLE = sc.nextDouble();
-                if (TLE < 0 || (TLE <= 59.4 && TLE >= 0) || TLE > 100) {
+                if (TLE <= 59.4 || TLE > 100) {
                     System.out.println("Error: did not meet the required grade");
                 }
-            } while (TLE < 0 || (TLE <= 59.4 && TLE >= 0) || TLE > 100);
+            } while (TLE <= 59.4 || TLE > 100);
 
             //Formula to compute grades (Total subjects) / Total number of subjecrs
             double avgGrade = (math + english + science + ESP + MAPEH + filipino + AP + TLE) / 8;
@@ -191,7 +206,7 @@ public class Grade {
 
             System.out.println();
 
-            System.out.println("*****************************************************");
+            System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★");
 
             System.out.printf("Student Name: %s\n", studentName);
             System.out.printf("Student Number: %d\n", studentNumber);
@@ -234,10 +249,12 @@ public class Grade {
             }
 
 
-            System.out.println("*****************************************************");
+            System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★");
+            //Ask if the user wants to check another student grades
             System.out.print("Would you like to check another student record? (y/n): ");
             sc.nextLine();
             continueInput = sc.nextLine();
+            //Empty the "studentName" for the next scanner
             studentName = "";
         } while (continueInput.equalsIgnoreCase("y"));
 
