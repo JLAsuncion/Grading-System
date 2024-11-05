@@ -135,12 +135,12 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Final Grade in Math: ");
                 }
                 finalMathGrade = sc.nextDouble();
-                if (finalMathGrade <= 59.4) {
+                if (finalMathGrade <= 59.9) {
                     System.out.println("Error: Did not meet the required grade ");
                 } else if (finalMathGrade > 100) {
                     System.out.println("Error: Grade exceeded ");
                 }
-            } while (finalMathGrade <= 59.4 || finalMathGrade > 100);
+            } while (finalMathGrade <= 59.9 || finalMathGrade > 100);
 
             //English
             do {
@@ -151,12 +151,12 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Final Grade in English: ");
                 }
                 finalEnglishGrade = sc.nextDouble();
-                if (finalEnglishGrade <= 59.4) {
+                if (finalEnglishGrade <= 59.9) {
                     System.out.println("Error: Did not meet the required grade ");
                 } else if (finalEnglishGrade > 100) {
                     System.out.println("Error: Grade exceeded ");
                 }
-            } while (finalEnglishGrade <= 59.4 || finalEnglishGrade > 100);
+            } while (finalEnglishGrade <= 59.9 || finalEnglishGrade > 100);
 
             //Science
             do {
@@ -167,12 +167,12 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Final Grade in Science: ");
                 }
                 finalScienceGrade = sc.nextDouble();
-                if (finalScienceGrade <= 59.4) {
+                if (finalScienceGrade <= 59.9) {
                     System.out.println("Error: Did not meet the required grade ");
                 } else if (finalScienceGrade > 100) {
                     System.out.println("Error: Grade exceeded ");
                 }
-            } while (finalScienceGrade <= 59.4 || finalScienceGrade > 100);
+            } while (finalScienceGrade <= 59.9 || finalScienceGrade > 100);
 
 
             //ESP
@@ -184,12 +184,12 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Final Grade in ESP: ");
                 }
                 finalESPGrade = sc.nextDouble();
-                if (finalESPGrade <= 59.4) {
+                if (finalESPGrade <= 59.9) {
                     System.out.println("Error: Did not meet the required grade ");
                 } else if (finalESPGrade > 100) {
                     System.out.println("Error: Grade exceeded ");
                 }
-            } while (finalESPGrade <= 59.4 || finalESPGrade > 100);
+            } while (finalESPGrade <= 59.9 || finalESPGrade > 100);
 
             //MAPEH
             do {
@@ -200,12 +200,12 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Final Grade in MAPEH: ");
                 }
                 finalMAPEHGrade = sc.nextDouble();
-                if (finalMAPEHGrade <= 59.4) {
+                if (finalMAPEHGrade <= 59.9) {
                     System.out.println("Error: Did not meet the required grade ");
                 } else if (finalMAPEHGrade > 100) {
                     System.out.println("Error: Grade exceeded ");
                 }
-            } while (finalMAPEHGrade <= 59.4 || finalMAPEHGrade > 100);
+            } while (finalMAPEHGrade <= 59.9 || finalMAPEHGrade > 100);
 
             //Filipino
             do {
@@ -216,12 +216,12 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Final Grade in Filipino: ");
                 }
                 finalFilipinoGrade = sc.nextDouble();
-                if (finalFilipinoGrade <= 59.4) {
+                if (finalFilipinoGrade <= 59.9) {
                     System.out.println("Error: Did not meet the required grade ");
                 } else if (finalFilipinoGrade > 100) {
                     System.out.println("Error: Grade exceeded ");
                 }
-            } while (finalFilipinoGrade <= 59.4 || finalFilipinoGrade > 100);
+            } while (finalFilipinoGrade <= 59.9 || finalFilipinoGrade > 100);
 
             //AP
             do {
@@ -232,12 +232,12 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Final Grade in AP: ");
                 }
                 finalAPGrade = sc.nextDouble();
-                if (finalAPGrade <= 59.4) {
+                if (finalAPGrade <= 59.9) {
                     System.out.println("Error: Did not meet the required grade ");
                 } else if (finalAPGrade > 100) {
                     System.out.println("Error: Grade exceeded ");
                 }
-            } while (finalAPGrade <= 59.4 || finalAPGrade > 100);
+            } while (finalAPGrade <= 59.9 || finalAPGrade > 100);
 
             //TLE
             do {
@@ -249,12 +249,12 @@ public class Grade {
                     System.out.printf("%-25s", "Enter Final Grade in TLE: ");
                 }
                 finalTLEGrade = sc.nextDouble();
-                if (finalTLEGrade <= 59.4) {
+                if (finalTLEGrade <= 59.9) {
                     System.out.println("Error: Did not meet the required grade ");
                 } else if (finalTLEGrade > 100) {
                     System.out.println("Error: Grade exceeded ");
                 }
-            } while (finalTLEGrade <= 59.4 || finalTLEGrade > 100);
+            } while (finalTLEGrade <= 59.9 || finalTLEGrade > 100);
 
             //Formula to compute grades (Total subjects) / Total number of subjects
             double avgGrade = (finalMathGrade + finalEnglishGrade + finalScienceGrade + finalESPGrade +
