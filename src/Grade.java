@@ -115,8 +115,8 @@ public class Grade {
                     } else {
                         // Handle numbers that are not 12 digits
                         // This else executes when:
-                        // - number < 100000000000L (less than 12 digits)
-                        // - number > 999999999999L (more than 12 digits)
+                        // - studentNumber < 100000000000L (less than 12 digits)
+                        // - studentNumber > 999999999999L (more than 12 digits)
                         System.out.println("Error: Student number must be exactly 12 digits.");
                     }
                 }
