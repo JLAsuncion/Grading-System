@@ -128,11 +128,11 @@ public class Grade {
             //Do while is used because it's useful for checking invalid input
             //Math
             do {
-                System.out.printf("%-25s", "Enter Final Grade in Math: ");
+                System.out.printf("%-32s", "Enter Final Grade in Math: ");
                 while (!sc.hasNextDouble()) {
                     System.out.println("Error: Cannot be a letter or symbol");
                     sc.next();
-                    System.out.printf("%-25s", "Enter Final Grade in Math: ");
+                    System.out.printf("%-32s", "Enter Final Grade in Math: ");
                 }
                 finalMathGrade = sc.nextDouble();
                 if (finalMathGrade <= 59.9) {
@@ -144,11 +144,11 @@ public class Grade {
 
             //English
             do {
-                System.out.printf("%-25s", "Enter Final Grade in English: ");
+                System.out.printf("%-32s", "Enter Final Grade in English: ");
                 while (!sc.hasNextDouble()) {
                     System.out.println("Error: Cannot be a letter or symbol");
                     sc.next();
-                    System.out.printf("%-25s", "Enter Final Grade in English: ");
+                    System.out.printf("%-32s", "Enter Final Grade in English: ");
                 }
                 finalEnglishGrade = sc.nextDouble();
                 if (finalEnglishGrade <= 59.9) {
@@ -160,11 +160,11 @@ public class Grade {
 
             //Science
             do {
-                System.out.printf("%-25s", "Enter Final Grade in Science: ");
+                System.out.printf("%-32s", "Enter Final Grade in Science: ");
                 while (!sc.hasNextDouble()) {
                     System.out.println("Error: Cannot be a letter or symbol");
                     sc.next();
-                    System.out.printf("%-25s", "Enter Final Grade in Science: ");
+                    System.out.printf("%-32s", "Enter Final Grade in Science: ");
                 }
                 finalScienceGrade = sc.nextDouble();
                 if (finalScienceGrade <= 59.9) {
@@ -177,11 +177,11 @@ public class Grade {
 
             //ESP
             do {
-                System.out.printf("%-25s", "Enter Final Grade in ESP: ");
+                System.out.printf("%-32s", "Enter Final Grade in ESP: ");
                 while (!sc.hasNextDouble()) {
                     System.out.println("Error: Cannot be a letter or symbol");
                     sc.next();
-                    System.out.printf("%-25s", "Enter Final Grade in ESP: ");
+                    System.out.printf("%-32s", "Enter Final Grade in ESP: ");
                 }
                 finalESPGrade = sc.nextDouble();
                 if (finalESPGrade <= 59.9) {
@@ -193,11 +193,11 @@ public class Grade {
 
             //MAPEH
             do {
-                System.out.printf("%-25s", "Enter Final Grade in MAPEH: ");
+                System.out.printf("%-32s", "Enter Final Grade in MAPEH: ");
                 while (!sc.hasNextDouble()) {
                     System.out.println("Error: Cannot be a letter or symbol");
                     sc.next();
-                    System.out.printf("%-25s", "Enter Final Grade in MAPEH: ");
+                    System.out.printf("%-32s", "Enter Final Grade in MAPEH: ");
                 }
                 finalMAPEHGrade = sc.nextDouble();
                 if (finalMAPEHGrade <= 59.9) {
@@ -209,11 +209,11 @@ public class Grade {
 
             //Filipino
             do {
-                System.out.printf("%-25s", "Enter Final Grade in Filipino: ");
+                System.out.printf("%-32s", "Enter Final Grade in Filipino: ");
                 while (!sc.hasNextDouble()) {
                     System.out.println("Error: Cannot be a letter or symbol");
                     sc.next();
-                    System.out.printf("%-25s", "Enter Final Grade in Filipino: ");
+                    System.out.printf("%-32s", "Enter Final Grade in Filipino: ");
                 }
                 finalFilipinoGrade = sc.nextDouble();
                 if (finalFilipinoGrade <= 59.9) {
@@ -225,11 +225,11 @@ public class Grade {
 
             //AP
             do {
-                System.out.printf("%-25s", "Enter Final Grade in AP: ");
+                System.out.printf("%-32s", "Enter Final Grade in AP: ");
                 while (!sc.hasNextDouble()) {
                     System.out.println("Error: Cannot be a letter or symbol");
                     sc.next();
-                    System.out.printf("%-25s", "Enter Final Grade in AP: ");
+                    System.out.printf("%-32s", "Enter Final Grade in AP: ");
                 }
                 finalAPGrade = sc.nextDouble();
                 if (finalAPGrade <= 59.9) {
@@ -241,12 +241,12 @@ public class Grade {
 
             //TLE
             do {
-                System.out.printf("%-25s", "Enter Final Grade in TLE: ");
+                System.out.printf("%-32s", "Enter Final Grade in TLE: ");
                 while (!sc.hasNextDouble()) {
                     //When user input a character or string
                     System.out.println("Error: Cannot be a letter or symbol");
                     sc.next();
-                    System.out.printf("%-25s", "Enter Final Grade in TLE: ");
+                    System.out.printf("%-32s", "Enter Final Grade in TLE: ");
                 }
                 finalTLEGrade = sc.nextDouble();
                 if (finalTLEGrade <= 59.9) {
