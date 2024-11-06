@@ -1,26 +1,26 @@
 /*
 **************WELCOME TO GRADING SYSTEM*************
 Enter Student Full Name:      NAME [ENTER]
-Enter Student Number:    1111 [ENTER]
+Enter Student Number:         1111 [ENTER]
 
-Enter Final Grade in Math:     1   [ENTER]
-Enter Final Grade in English:  1   [ENTER]
-Enter Final Grade in Science:  1   [ENTER]
-Enter Final Grade in ESP:      1   [ENTER]
-Enter Final Grade in MAPEH:    1   [ENTER]
-Enter Final Grade in Filipino: 1   [ENTER]
-Enter Final Grade in AP:       1   [ENTER]
-Enter Final Grade in TLE:      1   [ENTER]
+Enter Final Grade in Math:      1   [ENTER]
+Enter Final Grade in English:   1   [ENTER]
+Enter Final Grade in Science:   1   [ENTER]
+Enter Final Grade in ESP:       1   [ENTER]
+Enter Final Grade in MAPEH:     1   [ENTER]
+Enter Final Grade in Filipino:  1   [ENTER]
+Enter Final Grade in AP:        1   [ENTER]
+Enter Final Grade in TLE:       1   [ENTER]
 
 *****************************************************
 Student Name: NAME
 Student Number: 1111
-Average Grade: 1.0
-Rounded Grade: 1
+General Average: 1.0
+General Average Rounded: 1
 Remarks:****
 Awards: ****
 *****************************************************
-Would you like to check another student record? (y/n):
+Would you like to check another student record? (y/n) or (Y/N):
 */
 
 import java.util.*;
