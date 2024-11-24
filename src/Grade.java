@@ -288,11 +288,11 @@ public class Grade {
             //if 'failedSubjects' is 0 means there is no subjects that are less than 75
             if (failedSubjects == 0) {
                 System.out.println("Remarks: Passed");
-                if (roundedAvgGrade >= 96 && roundedAvgGrade <= 100) {
+                if (roundedAvgGrade >= 98 && roundedAvgGrade <= 100) {
                     System.out.println("Awards: WITH HIGHEST HONOR");
-                } else if (roundedAvgGrade >= 90 && roundedAvgGrade <= 95) {
+                } else if (roundedAvgGrade >= 95 && roundedAvgGrade <= 97) {
                     System.out.println("Awards: WITH HIGH HONOR");
-                } else if (roundedAvgGrade >= 85 && roundedAvgGrade <= 89) {
+                } else if (roundedAvgGrade >= 90 && roundedAvgGrade <= 94) {
                     System.out.println("Awards: WITH HONOR");
                 }
 
