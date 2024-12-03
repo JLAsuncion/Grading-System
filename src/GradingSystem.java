@@ -25,7 +25,7 @@ Would you like to check another student record? (y/n) or (Y/N):
 
 import java.util.*;
 
-public class Grade {
+public class GradingSystem {
     public static void main(String[] args) {
 
         String studentFullName = "";
@@ -125,6 +125,7 @@ public class Grade {
             System.out.println();
 
             //Looping Galore
+            //GRADES
             //Do while is used because it's useful for checking invalid input
             //Math
             do {
